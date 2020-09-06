@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("Images", {
+    return queryInterface.createTable("Users", {
       id: {
         primaryKey: true,
         allowNull: false,
@@ -20,24 +20,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      url: {
+      passwordHash: {
         type: Sequelize.STRING,
-        allowNull: false,
-      },
-      isPrivate: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
-      quantity: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      price: {
-        type: Sequelize.DOUBLE,
-        allowNull: false,
-      },
-      discountPercentage: {
-        type: Sequelize.FLOAT,
         allowNull: false,
       },
       createdAt: {
@@ -51,6 +35,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("Images");
+    return queryInterface.dropTable("Users");
   },
 };
