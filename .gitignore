@@ -1,0 +1,20 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# npm
+node_modules
+package-lock.json
+*.log
+*.gz
+coverage
+
+# Benchmarking
+benchmarks/graphs
+
+# Environment Variables
+*.env 
+
+# Storage Files
+storage
