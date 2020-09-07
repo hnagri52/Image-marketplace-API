@@ -1,9 +1,10 @@
 var express = require("express");
 var router = express.Router();
+const users = require("../controllers/users_controller");
 
-/* GET users. */
-router.get("/", function (req, res, next) {
-  res.send("This will return a list of users");
-});
+
+/* Authorization routes. */
+router.post("/register", users.register);
+router.post("/login", users.login);
 
 module.exports = router;
