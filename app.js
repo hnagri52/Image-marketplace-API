@@ -5,6 +5,8 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var dotenv = require("dotenv");
 dotenv.config();
+require("./middleware/passport");
+
 
 //route imports
 var indexRouter = require("./routes/index_routes");
