@@ -8,15 +8,16 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
       },
-      firstName: {
+      userId: {
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false,
+      },
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      lastName: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      email: {
+      description: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -38,6 +39,10 @@ module.exports = {
       },
       discountPercentage: {
         type: Sequelize.FLOAT,
+        allowNull: false,
+      },
+      cloudinaryId: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {

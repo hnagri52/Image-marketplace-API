@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       quantity: DataTypes.INTEGER,
       price: DataTypes.DOUBLE,
       discountPercentage: DataTypes.FLOAT,
+      cloudinaryId: DataTypes.STRING,
     },
     {}
   );
