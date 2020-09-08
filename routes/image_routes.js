@@ -24,4 +24,7 @@ router.post("/", passport.authenticate("jwt", { session: false }), multerUpload.
 /* DELETE Image. */
 router.delete("/", passport.authenticate("jwt", { session: false }), images.deleteImages);
 
+/* GET search for Image. */
+router.get("/search", images.searchImages);
+
 module.exports = router;
