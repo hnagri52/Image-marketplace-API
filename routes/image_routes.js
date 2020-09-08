@@ -19,6 +19,9 @@ router.get("/:imageId", passport.authenticate("jwt", { session: false }), images
 router.patch("/:imageId", passport.authenticate("jwt", { session: false }), images.patchImage);
 
 /* POST Upload Image. */
-router.post("/", multerUpload.array("image"), images.postImages);
+router.post("/", passport.authenticate("jwt", { session: false }), multerUpload.array("image"), images.postImages);
+
+/* DELETE Image. */
+router.delete("/", passport.authenticate("jwt", { session: false }), images.deleteImages);
 
 module.exports = router;
