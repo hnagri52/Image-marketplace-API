@@ -1,6 +1,4 @@
-# shopify-backend-challenge
-
-Thank you for taking the time to look at my project for the Shopify Winter 2021 Internship.
+# Image-marketplace-API
 
 This project requires the following prerequisites to setup and run:
 
